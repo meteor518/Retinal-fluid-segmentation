@@ -1,9 +1,9 @@
-# 基于模糊C均值聚类法进行OCT水肿分割。
+# 基于模糊C均值聚类法进行OCT水肿分割
 最终主代码为`main_sfcm.m`。
 
 ## main_sfcm.m
-  修改代码中图片路径，直接运行该文件即可。代码是采用基于FCM修改的sfcm函数进行聚类分割。sfcm函数公式见[本人论文](https://ieeexplore.ieee.org/abstract/document/7603476/)。
-  代码中采用两次SFCM分割，第一次整体聚类为了得到ILM层，第二次在视网膜区域SFCM分割水肿。
+    修改代码中图片路径，直接运行该文件即可。代码是采用基于FCM修改的sfcm函数进行聚类分割。sfcm函数公式见[本人论文](https://ieeexplore.ieee.org/abstract/document/7603476/)。
+    代码中采用两次SFCM分割，第一次整体聚类为了得到ILM层，第二次在视网膜区域SFCM分割水肿。
 
 ## main_fcm.m
 代码直接调用MATLAB工具库的FCM函数，利用传统fcm分割。
