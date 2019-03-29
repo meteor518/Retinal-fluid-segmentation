@@ -43,7 +43,7 @@ python my_generate_3d_npy.py -t 训练集的路径 -l 训练标签路径 -n 保�
 >>>...
 >>>
 >>>18.png
->> 
+> 
 >>病人2
 >>>0.png
 >>>
@@ -55,37 +55,33 @@ python my_generate_3d_npy.py -t 训练集的路径 -l 训练标签路径 -n 保�
 ## networks
 网络模型的搭建、训练、测试代码
 
-* MyModel
-该目录下为所有网络的框架搭建
+* MyModel: 该目录下为所有网络的框架搭建
 
-* metrics.py
-计算评价指标，例如acc/f1等
+* metrics.py: 计算评价指标，例如acc/f1等
 
-* my_loss.py
-自己编写的各种loss函数实现代码。有weighted loss、focal loss、自己创造的多分类的WALF loss。
+* my_loss.py: 自己编写的各种loss函数实现代码。有weighted loss、focal loss、自己创造的多分类的WALF loss。
 
-* my_train_2d.py / my_train_3d.py
+* my_train_2d.py / my_train_3d.py: 训练代码
 
 以2D网络为例：
 ```训练代码
 python my_train_2d.py --dirs 存储结果的主目录 -n 训练集和标签.npy文件目录 -model vgg_unet_bn -loss ce -batch 32 -c 3 -e 150
 ```
-
-* my_predict_2d.py / my_predict_3d.py
+* my_predict_2d.py / my_predict_3d.py: 测试代码
 ```测试代码
 python my_predict_2d.py --dirs 存储结果的主目录 -n 测试集.npy文件目录 -model vgg_unet_bn -loss ce -c 3
 ```
 ## res_evaluate
 对结果评估的代码实现
 * calculate_metrics
+
 该文件夹下调用[pycm](https://pypi.org/project/pycm/)库，读预测结果进行各种评估系数的计算。
 
 以2d预测结果为例
 ```
 python mytest_2d.py -lf 测试集标签的.npy文件 -pf 测试集网络预测的.npy文件 -save 保存的评估系数文件路径 --name 预测所使用的网络模型
 ```
-* plot_curve
-画各种网络训练的acc / loss曲线图
+* plot_curve： 画各种网络训练的acc / loss曲线图
 
 ## visualization
 cnn网络中间层的结果可视化
