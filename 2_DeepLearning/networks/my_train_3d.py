@@ -53,10 +53,10 @@ def train(model_name, loss_name, npy_path,
 if __name__ == '__main__':
     parse = argparse.ArgumentParser()
     parse.add_argument('--dirs', required=True, help="The home directory of things to be saved.")
-    parse.add_argument('--npy-path', required=True, help='The path od .npy files')
+    parse.add_argument('--npy-path', '-n', required=True, help='The path od .npy files')
 
-    parse.add_argument('--model-name', default='vgg_unet')
-    parse.add_argument('--loss-name', default='ce')
+    parse.add_argument('--model-name', '-model', default='vgg_unet')
+    parse.add_argument('--loss-name', '-loss', default='ce')
 
     parse.add_argument('--batch-size', '-batch', type=int, default=32)
     parse.add_argument('--classes', '-c', type=int, default=3)
