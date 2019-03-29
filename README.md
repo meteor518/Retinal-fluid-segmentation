@@ -1,5 +1,5 @@
 # Retinal-fluid-segmentation
-Segmentation algorithms of retinal fluid. The project uses three methods.
+Segmentation algorithms of retinal fluid. The project uses three methods. See the readme.md file in each method folder for the specific steps of running codes.
 ## 0_threshold
 Based-threshold method for edema segmentation.
 ## 1_FCM
