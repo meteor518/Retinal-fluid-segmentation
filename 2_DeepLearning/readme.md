@@ -52,7 +52,7 @@ python my_generate_3d_npy.py -t 训练集的路径 -l 训练标签路径 -n 保�
 >>>18.png
 >>...依次类推
 
-## networks
+## 2. networks
 网络模型的搭建、训练、测试代码
 
 * MyModel: 该目录下为所有网络的框架搭建
@@ -71,7 +71,7 @@ python my_train_2d.py --dirs 存储结果的主目录 -n 训练集和标签.npy�
 ```测试代码
 python my_predict_2d.py --dirs 存储结果的主目录 -n 测试集.npy文件目录 -model vgg_unet_bn -loss ce -c 3
 ```
-## res_evaluate
+## 3. res_evaluate
 对结果评估的代码实现
 * calculate_metrics
 
@@ -83,7 +83,7 @@ python mytest_2d.py -lf 测试集标签的.npy文件 -pf 测试集网络预测�
 ```
 * plot_curve： 画各种网络训练的acc / loss曲线图
 
-## visualization
+## 4. visualization
 cnn网络中间层的结果可视化
 
 直接运行`vgg16_intermediate_layer_visualization_gui.py`文件
